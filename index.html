@@ -26,14 +26,42 @@
         <br>
         <img src="images/reesepic.jpg" alt="">
         <h2>Welcome to My Site!</h2>
+
+        <!--button id selects the document.getelementbyId through the id name which is submit form-->
+        <p>Click to try love calculator</p>
+        <button id="submitForm">Play Love Calculator</button>
+
+        <!--.onclick = test trigures the function name test -->
+        <script>
+        function loveCalculator() {
+          // This love calculator takes in two names, generates a number between 1-100 and gives names and number back to user //
+          var yourName = prompt("What is your name?");
+          var crushName = prompt("What is their name?");
+          var loveScore = Math.random() * 100;
+          loveScore = Math.floor(loveScore) + 1;
+          if(loveScore >= 50) {
+            alert( yourName + ", Your love score is " + loveScore + "% with " + crushName + " You will live together forever");
+          } else {
+            alert( yourName + ", Your score is " + loveScore + "% with " + crushName + " Yall won't last a day sorry.");
+          }
+        }
+
+        <!-- -->
+         document.getElementById('submitForm').onclick = loveCalculator;
+        </script>
+
+          <!--
+          $("#submitForm").click(function() { alert("The Form has been Submitted."); });
+          </script>
         <p class="intro">I play basketball and i am a gamer.</p>
         <a href="
         <script>
+
         var theBestConsole = "New XBOX";
         var yourTheBestConsole = prompt("In your opinion, What is the Best Console?");
         alert("Reese Thinks the best console is " + theBestConsole + " And, You think the best Console is " + yourTheBestConsole + ". Do you want to play together?");
-        </script>
-        ">Click here to play a game</a>
+        </script>  -->
+        </a>
       </div>
       <hr>
       <div class="skills">
@@ -64,7 +92,7 @@
 
       <a class="footer-link" href="https://www.instagram.com/legen.clan/?hl=en">Instagram</a>
       <a class="footer-link" href="https://twitter.com/Reese45725649">Twitter</a>
-      <p class="copyright">© 2020 Reese Miller.</p>
+      <p class="copyright">© 2021 Reese Miller.</p>
     </div>
 
 
