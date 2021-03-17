@@ -35,16 +35,29 @@
         <script>
         function loveCalculator() {
           // This love calculator takes in two names, generates a number between 1-100 and gives names and number back to user //
+
           var yourName = prompt("What is your name?");
           var crushName = prompt("What is their name?");
           var loveScore = Math.random() * 100;
           loveScore = Math.floor(loveScore) + 1;
-          if(loveScore >= 50) {
-            alert( yourName + ", Your love score is " + loveScore + "% with " + crushName + " You will live together forever");
-          } else {
-            alert( yourName + ", Your score is " + loveScore + "% with " + crushName + " Yall won't last a day sorry.");
+
+          if(loveScore >= 80) {
+              alert( yourName + ", Your love score is " + loveScore + "% with " + crushName + " You will live together forever");
           }
-        }
+
+          if(loveScore >= 50 && loveScore < 80) {
+              alert( yourName + ", Your score is " + loveScore + "% with " + crushName + " Yall won't last a day sorry.");
+          }
+
+          if(loveScore >= 20 && loveScore < 50) {
+              alert( yourName + ", Your score is " + loveScore + "% with " + crushName + " You could try a day but I doubt it will work ;).");
+          }
+
+          if(loveScore < 20) {
+              alert( yourName + ", Your score is " + loveScore + "% with " + crushName + " Don't try. You guys dont love kayne like kayne does.");
+          }
+
+          }
 
         <!-- -->
          document.getElementById('submitForm').onclick = loveCalculator;
