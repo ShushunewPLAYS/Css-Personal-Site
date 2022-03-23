@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Celebrity Reese Merch</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon (2).ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" href="/css/master.css">
+    <h1>Welcome to CRM</h1>
+  </head>
+  <body>
+
+
+            <!--button id selects the document.getelementbyId through the id name which is submit form-->
+            <p>Click to have a chance at getting a discount off of one of our various items!</p>
+            <button id="submitForm">Play Merch Game</button>
+
+            <!--.onclick = test trigures the function name test -->
+            <script>
+            function merchGame() {
+              // This love calculator takes in two names, generates a number between 1-100 and gives names and number back to user //
+
+              var yourName = prompt("What is your name?");
+              var yourEmail = prompt("What is your email?");
+              var merchScore = Math.random() * 100;
+              merchScore = Math.floor(merchScore) + 1;
+
+              if(merchScore >= 80) {
+                  alert( yourName + ", You just won " + merchScore + "% off of Merch. Verify your email, " + yourEmail + ", so we can send you the discount code");
+              }
+
+              if(merchScore >= 50 && merchScore < 80) {
+                  alert( yourName + ", You just won " + merchScore + "% off of our Shoes. Verify your email, " + yourEmail + ", so we can send you the discount code");
+              }
+
+              if(merchScore >= 20 && merchScore < 50) {
+                  alert( yourName + ", You just won " + merchScore + "% off of our Keychains. Verify your email,  " + yourEmail + ", so we can send you the discount code");
+              }
+
+              if(merchScore < 20) {
+                  alert( merchScore + ", You just won " + merchScore + "% off of our Mask style/Shrek Styled erasers and Pencils. Verify your email, " + yourEmail + ", so we can send you the discount code");
+              }
+
+              }
+
+            <!-- -->
+             document.getElementById('submitForm').onclick = merchGame;
+            </script>
+
+  </body>
+</html>
